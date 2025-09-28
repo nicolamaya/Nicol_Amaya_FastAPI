@@ -1,11 +1,15 @@
 # 🦷 Proyecto de Testing y Calidad: Clínica Dental - Ficha 3147246
 
 ## 🎯 Objetivo del Proyecto
+
 Este proyecto implementa una API RESTful básica para la gestión de Pacientes en el dominio de una Clínica Dental. El objetivo principal es desarrollar una suite de Tests de Integración y Lógica de Negocio utilizando Pytest para asegurar la calidad y el cumplimiento de las reglas específicas del negocio asignado (Clínica Dental).
 
 Este desarrollo cumple con la metodología personalizada y los criterios de evaluación de la Ficha 3147246, enfocándose en la implementación de tests específicos y una estructura modular profesional.
 
+---
+
 ## 🛠️ Tecnologías Utilizadas
+
 Python 3.10+: Lenguaje de programación.
 
 FastAPI: Framework moderno y rápido para construir la API.
@@ -16,10 +20,13 @@ Pytest: Framework de testing para la creación de la suite de pruebas.
 
 fastapi.testclient: Para simular peticiones HTTP y probar los endpoints.
 
+---
+
 ## 📂 Estructura del Proyecto
+
 El proyecto sigue una estructura modular para mejorar la organización, escalabilidad y facilitar el testing (criterio de Estructura Profesional):
 
-.
+app-clinica-dental/
 ├── main.py             # Punto de entrada de FastAPI y enrutamiento principal.
 ├── schemas.py          # Definiciones de modelos Pydantic (PacienteBase, PacienteCompleto).
 ├── database.py         # Simulación de la base de datos (diccionario en memoria).
@@ -29,7 +36,10 @@ El proyecto sigue una estructura modular para mejorar la organización, escalabi
 └── test/
     └── test_dental.py  # Suite de Tests de Lógica de Negocio Específica (Criterio 30%).
 
+---
+
 ## ⚙️ Configuración y Ejecución Local
+
 Requisitos
 Asegúrate de tener Python instalado y usa pip para instalar las dependencias:
 
@@ -65,7 +75,10 @@ Descripción: El campo historial_medico debe ser descriptivo, con una longitud m
 
 Validación: Si el historial es demasiado corto, la API retorna un error HTTP 400 Bad Request (Validado por test_04_create_paciente_fail_historial_generico).
 
+---
+
 ## 🧪 Suite de Tests (test/test_dental.py)
+
 La suite de pruebas contiene fixtures personalizados y se centra en validar cada caso de éxito y de error de la lógica de negocio:
 
 test_01_create_paciente_success_adulto: Paciente adulto (válido).
