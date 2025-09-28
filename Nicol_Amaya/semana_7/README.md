@@ -1,13 +1,18 @@
 # ⚡ Semana 7: API de Veterinaria Optimizada (Ficha 3147246)
+
 ## 🎯 Objetivo del Proyecto
+
 Este repositorio contiene la implementación de las técnicas avanzadas de optimización y performance para la FICHA 3147246.
 
 El dominio asignado es Veterinaria, y el foco principal de la optimización es la consulta de Historiales médicos de las mascotas, ya que son datos consultados con alta frecuencia y contienen información crítica y potencialmente pesada.
 
+---
+
 ## 🛠️ Estructura del Proyecto
+
 El proyecto sigue la estructura modular recomendada para facilitar la separación de preocupaciones (FastAPI, Redis, Modelos).
 
-veterinaria-api/
+app-veterinaria/
 ├── api/
 │   └── main.py              # Rutas de la API (Endpoints)
 ├── core/
@@ -17,6 +22,7 @@ veterinaria-api/
 └── requirements.txt         # Dependencias del proyecto
 
 ## ⚙️ Configuración y Requisitos
+
 Para ejecutar el proyecto localmente, necesitas tener instalados Python 3.8+ y un servidor de Redis en ejecución.
 
 1. Requisitos de Python
@@ -38,7 +44,10 @@ Para iniciar un servidor Redis rápidamente con Docker:
 
 docker run --name redis-cache -p 6379:6379 -d redis
 
+---
+
 ## 🚀 Implementación de Prácticas de Optimización
+
 Práctica 23: Redis Caching (Veterinaria - Historiales Médicos)
 Foco: Optimizar el tiempo de respuesta en la consulta de Historiales médicos, que son documentos grandes y esenciales para la operación diaria.
 
@@ -58,7 +67,10 @@ Primer acceso (Cache Miss): Latencia alta (simulada entre 700ms - 1500ms) por co
 
 Accesos subsecuentes (Cache Hit): Latencia ultrabaja (∼50ms) al servir la respuesta directamente desde Redis.
 
+---
+
 ## 💻 Instrucciones de Ejecución
+
 Asegúrate de que Redis está corriendo (ver Configuración de Redis).
 
 Ejecuta el servidor FastAPI usando Uvicorn:
@@ -80,7 +92,10 @@ Llama a esta ruta varias veces en un minuto y observa la diferencia de tiempo de
 
 Verifica el log de la API para confirmar los eventos CACHE HIT y CACHE MISS.
 
+---
+
 ## 💡 Próximos Pasos (Fichas 24, 25, 26)
+
 Este proyecto está preparado para futuras implementaciones:
 
 Práctica
